@@ -1,0 +1,16 @@
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\EstadosOrdenEntrada.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\dao\CustomHibernateDao.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\dao\Parameter.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\Ciudad.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\OrdenesTrabajo.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\LineasOrdenEntradaId.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\dao\CustomHibernateDaoImpl.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\LineasOrdenEntrada.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\Pais.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\OrdenesEntrada.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\LineasOrdenTrabajo.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\EstadosOrdenTrabajo.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\CausalesAnulacionOrdenEntrada.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\LineasOrdenTrabajoId.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\bo\OrdenesEntradaBO.java
+Z:\git\tactic-model\src\main\java\com\tacticlogistics\model\entities\CausalesAnulacionOrdenTrabajo.java
