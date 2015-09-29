@@ -22,12 +22,13 @@ import javax.persistence.TemporalType;
 @Table(name = "Clientes", catalog = "dbo")
 public class Clientes implements java.io.Serializable {
 
-	private int clienteId;
+	private static final long serialVersionUID = 1L;
+	private Integer clienteId;
 	private TiposIdentificacion tiposIdentificacion;
 	private String identificacion;
 	private String razonSocial;
 	private String nombreComercial;
-	private boolean activo;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<ClientesFinales> clientesFinaleses = new HashSet<ClientesFinales>(0);
@@ -36,8 +37,8 @@ public class Clientes implements java.io.Serializable {
 	public Clientes() {
 	}
 
-	public Clientes(int clienteId, TiposIdentificacion tiposIdentificacion, String identificacion, String razonSocial,
-			String nombreComercial, boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
+	public Clientes(Integer clienteId, TiposIdentificacion tiposIdentificacion, String identificacion, String razonSocial,
+			String nombreComercial, Boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
 		this.clienteId = clienteId;
 		this.tiposIdentificacion = tiposIdentificacion;
 		this.identificacion = identificacion;
@@ -48,8 +49,8 @@ public class Clientes implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public Clientes(int clienteId, TiposIdentificacion tiposIdentificacion, String identificacion, String razonSocial,
-			String nombreComercial, boolean activo, Date fechaActualizacion, String usuarioActualizacion,
+	public Clientes(Integer clienteId, TiposIdentificacion tiposIdentificacion, String identificacion, String razonSocial,
+			String nombreComercial, Boolean activo, Date fechaActualizacion, String usuarioActualizacion,
 			Set<ClientesFinales> clientesFinaleses, Set<RadicacionesOrdenTransporte> radicacionesOrdenTransportes) {
 		this.clienteId = clienteId;
 		this.tiposIdentificacion = tiposIdentificacion;
@@ -66,11 +67,11 @@ public class Clientes implements java.io.Serializable {
 	@Id
 
 	@Column(name = "Cliente_Id", unique = true, nullable = false)
-	public int getClienteId() {
+	public Integer getClienteId() {
 		return this.clienteId;
 	}
 
-	public void setClienteId(int clienteId) {
+	public void setClienteId(Integer clienteId) {
 		this.clienteId = clienteId;
 	}
 
@@ -112,11 +113,11 @@ public class Clientes implements java.io.Serializable {
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 

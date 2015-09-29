@@ -25,12 +25,12 @@ import javax.persistence.UniqueConstraint;
 public class ClientesFinales implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private int clienteFinalId;
+	private Integer clienteFinalId;
 	private Clientes clientes;
 	private TiposIdentificacion tiposIdentificacion;
 	private String identificacion;
 	private String nombre;
-	private boolean activo;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<ClientesFinalesDireccion> clientesFinalesDireccions = new HashSet<ClientesFinalesDireccion>(0);
@@ -38,8 +38,8 @@ public class ClientesFinales implements java.io.Serializable {
 	public ClientesFinales() {
 	}
 
-	public ClientesFinales(int clienteFinalId, Clientes clientes, TiposIdentificacion tiposIdentificacion,
-			String identificacion, String nombre, boolean activo, Date fechaActualizacion,
+	public ClientesFinales(Integer clienteFinalId, Clientes clientes, TiposIdentificacion tiposIdentificacion,
+			String identificacion, String nombre, Boolean activo, Date fechaActualizacion,
 			String usuarioActualizacion) {
 		this.clienteFinalId = clienteFinalId;
 		this.clientes = clientes;
@@ -51,8 +51,8 @@ public class ClientesFinales implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public ClientesFinales(int clienteFinalId, Clientes clientes, TiposIdentificacion tiposIdentificacion,
-			String identificacion, String nombre, boolean activo, Date fechaActualizacion, String usuarioActualizacion,
+	public ClientesFinales(Integer clienteFinalId, Clientes clientes, TiposIdentificacion tiposIdentificacion,
+			String identificacion, String nombre, Boolean activo, Date fechaActualizacion, String usuarioActualizacion,
 			Set<ClientesFinalesDireccion> clientesFinalesDireccions) {
 		this.clienteFinalId = clienteFinalId;
 		this.clientes = clientes;
@@ -68,11 +68,11 @@ public class ClientesFinales implements java.io.Serializable {
 	@Id
 
 	@Column(name = "Cliente_Final_Id", unique = true, nullable = false)
-	public int getClienteFinalId() {
+	public Integer getClienteFinalId() {
 		return this.clienteFinalId;
 	}
 
-	public void setClienteFinalId(int clienteFinalId) {
+	public void setClienteFinalId(Integer clienteFinalId) {
 		this.clienteFinalId = clienteFinalId;
 	}
 
@@ -115,11 +115,11 @@ public class ClientesFinales implements java.io.Serializable {
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 

@@ -20,10 +20,11 @@ import javax.persistence.TemporalType;
 @Table(name = "Tipos_Identificacion", catalog = "dbo")
 public class TiposIdentificacion implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private String tipoIdentificacionId;
 	private String nombre;
-	private short ordinal;
-	private boolean activo;
+	private Short ordinal;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<ClientesFinales> clientesFinaleses = new HashSet<ClientesFinales>(0);
@@ -33,7 +34,7 @@ public class TiposIdentificacion implements java.io.Serializable {
 	public TiposIdentificacion() {
 	}
 
-	public TiposIdentificacion(String tipoIdentificacionId, String nombre, short ordinal, boolean activo,
+	public TiposIdentificacion(String tipoIdentificacionId, String nombre, Short ordinal, Boolean activo,
 			Date fechaActualizacion, String usuarioActualizacion) {
 		this.tipoIdentificacionId = tipoIdentificacionId;
 		this.nombre = nombre;
@@ -43,7 +44,7 @@ public class TiposIdentificacion implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public TiposIdentificacion(String tipoIdentificacionId, String nombre, short ordinal, boolean activo,
+	public TiposIdentificacion(String tipoIdentificacionId, String nombre, Short ordinal, Boolean activo,
 			Date fechaActualizacion, String usuarioActualizacion, Set<ClientesFinales> clientesFinaleses,
 			Set<OrdenesTransporte> ordenesTransportes, Set<Clientes> clienteses) {
 		this.tipoIdentificacionId = tipoIdentificacionId;
@@ -78,20 +79,20 @@ public class TiposIdentificacion implements java.io.Serializable {
 	}
 
 	@Column(name = "Ordinal", nullable = false)
-	public short getOrdinal() {
+	public Short getOrdinal() {
 		return this.ordinal;
 	}
 
-	public void setOrdinal(short ordinal) {
+	public void setOrdinal(Short ordinal) {
 		this.ordinal = ordinal;
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 

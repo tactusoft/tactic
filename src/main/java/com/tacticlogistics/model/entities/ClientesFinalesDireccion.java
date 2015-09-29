@@ -28,7 +28,7 @@ public class ClientesFinalesDireccion implements java.io.Serializable {
 	private ClientesFinalesDireccionId id;
 	private ClientesFinales clientesFinales;
 	private Direcciones direcciones;
-	private boolean activo;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<OrdenesTransporte> ordenesTransportes = new HashSet<OrdenesTransporte>(0);
@@ -37,7 +37,7 @@ public class ClientesFinalesDireccion implements java.io.Serializable {
 	}
 
 	public ClientesFinalesDireccion(ClientesFinalesDireccionId id, ClientesFinales clientesFinales,
-			Direcciones direcciones, boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
+			Direcciones direcciones, Boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
 		this.id = id;
 		this.clientesFinales = clientesFinales;
 		this.direcciones = direcciones;
@@ -47,7 +47,7 @@ public class ClientesFinalesDireccion implements java.io.Serializable {
 	}
 
 	public ClientesFinalesDireccion(ClientesFinalesDireccionId id, ClientesFinales clientesFinales,
-			Direcciones direcciones, boolean activo, Date fechaActualizacion, String usuarioActualizacion,
+			Direcciones direcciones, Boolean activo, Date fechaActualizacion, String usuarioActualizacion,
 			Set<OrdenesTransporte> ordenesTransportes) {
 		this.id = id;
 		this.clientesFinales = clientesFinales;
@@ -92,11 +92,11 @@ public class ClientesFinalesDireccion implements java.io.Serializable {
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 

@@ -10,32 +10,33 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class ClientesFinalesDireccionId implements java.io.Serializable {
 
-	private int clienteFinalId;
-	private int direccionId;
+	private static final long serialVersionUID = 1L;
+	private Integer clienteFinalId;
+	private Integer direccionId;
 
 	public ClientesFinalesDireccionId() {
 	}
 
-	public ClientesFinalesDireccionId(int clienteFinalId, int direccionId) {
+	public ClientesFinalesDireccionId(Integer clienteFinalId, Integer direccionId) {
 		this.clienteFinalId = clienteFinalId;
 		this.direccionId = direccionId;
 	}
 
 	@Column(name = "Cliente_Final_Id", nullable = false)
-	public int getClienteFinalId() {
+	public Integer getClienteFinalId() {
 		return this.clienteFinalId;
 	}
 
-	public void setClienteFinalId(int clienteFinalId) {
+	public void setClienteFinalId(Integer clienteFinalId) {
 		this.clienteFinalId = clienteFinalId;
 	}
 
 	@Column(name = "Direccion_Id", nullable = false)
-	public int getDireccionId() {
+	public Integer getDireccionId() {
 		return this.direccionId;
 	}
 
-	public void setDireccionId(int direccionId) {
+	public void setDireccionId(Integer direccionId) {
 		this.direccionId = direccionId;
 	}
 

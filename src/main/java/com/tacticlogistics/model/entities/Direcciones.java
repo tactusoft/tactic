@@ -22,15 +22,16 @@ import javax.persistence.TemporalType;
 @Table(name = "Direcciones", catalog = "dbo")
 public class Direcciones implements java.io.Serializable {
 
-	private int direccionId;
+	private static final long serialVersionUID = 1L;
+	private Integer direccionId;
 	private Ciudades ciudades;
 	private TiposDireccion tiposDireccion;
 	private Zonas zonas;
-	private byte tipoUsoDireccionId;
+	private Byte tipoUsoDireccionId;
 	private String nombre;
 	private String direccion;
 	private String indicaciones;
-	private boolean urbana;
+	private Boolean urbana;
 	private String barrio;
 	private String codigoPostal;
 	private String nombreContacto;
@@ -38,7 +39,7 @@ public class Direcciones implements java.io.Serializable {
 	private String telefonoFijo;
 	private String telefonoMovil;
 	private String email;
-	private boolean activo;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<ClientesFinalesDireccion> clientesFinalesDireccions = new HashSet<ClientesFinalesDireccion>(0);
@@ -47,10 +48,10 @@ public class Direcciones implements java.io.Serializable {
 	public Direcciones() {
 	}
 
-	public Direcciones(int direccionId, Ciudades ciudades, TiposDireccion tiposDireccion, byte tipoUsoDireccionId,
-			String nombre, String direccion, String indicaciones, boolean urbana, String barrio, String codigoPostal,
+	public Direcciones(Integer direccionId, Ciudades ciudades, TiposDireccion tiposDireccion, Byte tipoUsoDireccionId,
+			String nombre, String direccion, String indicaciones, Boolean urbana, String barrio, String codigoPostal,
 			String nombreContacto, String cargoContacto, String telefonoFijo, String telefonoMovil, String email,
-			boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
+			Boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
 		this.direccionId = direccionId;
 		this.ciudades = ciudades;
 		this.tiposDireccion = tiposDireccion;
@@ -71,10 +72,10 @@ public class Direcciones implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public Direcciones(int direccionId, Ciudades ciudades, TiposDireccion tiposDireccion, Zonas zonas,
-			byte tipoUsoDireccionId, String nombre, String direccion, String indicaciones, boolean urbana,
+	public Direcciones(Integer direccionId, Ciudades ciudades, TiposDireccion tiposDireccion, Zonas zonas,
+			Byte tipoUsoDireccionId, String nombre, String direccion, String indicaciones, Boolean urbana,
 			String barrio, String codigoPostal, String nombreContacto, String cargoContacto, String telefonoFijo,
-			String telefonoMovil, String email, boolean activo, Date fechaActualizacion, String usuarioActualizacion,
+			String telefonoMovil, String email, Boolean activo, Date fechaActualizacion, String usuarioActualizacion,
 			Set<ClientesFinalesDireccion> clientesFinalesDireccions, Set<CentrosDistribucion> centrosDistribucions) {
 		this.direccionId = direccionId;
 		this.ciudades = ciudades;
@@ -102,11 +103,11 @@ public class Direcciones implements java.io.Serializable {
 	@Id
 
 	@Column(name = "Direccion_Id", unique = true, nullable = false)
-	public int getDireccionId() {
+	public Integer getDireccionId() {
 		return this.direccionId;
 	}
 
-	public void setDireccionId(int direccionId) {
+	public void setDireccionId(Integer direccionId) {
 		this.direccionId = direccionId;
 	}
 
@@ -141,11 +142,11 @@ public class Direcciones implements java.io.Serializable {
 	}
 
 	@Column(name = "Tipo_Uso_Direccion_Id", nullable = false)
-	public byte getTipoUsoDireccionId() {
+	public Byte getTipoUsoDireccionId() {
 		return this.tipoUsoDireccionId;
 	}
 
-	public void setTipoUsoDireccionId(byte tipoUsoDireccionId) {
+	public void setTipoUsoDireccionId(Byte tipoUsoDireccionId) {
 		this.tipoUsoDireccionId = tipoUsoDireccionId;
 	}
 
@@ -177,11 +178,11 @@ public class Direcciones implements java.io.Serializable {
 	}
 
 	@Column(name = "Urbana", nullable = false)
-	public boolean isUrbana() {
+	public Boolean isUrbana() {
 		return this.urbana;
 	}
 
-	public void setUrbana(boolean urbana) {
+	public void setUrbana(Boolean urbana) {
 		this.urbana = urbana;
 	}
 
@@ -249,11 +250,11 @@ public class Direcciones implements java.io.Serializable {
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 

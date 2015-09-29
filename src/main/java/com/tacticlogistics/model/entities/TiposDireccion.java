@@ -20,13 +20,14 @@ import javax.persistence.TemporalType;
 @Table(name = "Tipos_Direccion", catalog = "dbo")
 public class TiposDireccion implements java.io.Serializable {
 
-	private short tipoDireccionId;
+	private static final long serialVersionUID = 1L;
+	private Integer tipoDireccionId;
 	private String codigo;
 	private String nombre;
 	private String descripcion;
-	private boolean principal;
-	private short ordinal;
-	private boolean activo;
+	private Boolean principal;
+	private Short ordinal;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<Direcciones> direccioneses = new HashSet<Direcciones>(0);
@@ -34,8 +35,8 @@ public class TiposDireccion implements java.io.Serializable {
 	public TiposDireccion() {
 	}
 
-	public TiposDireccion(short tipoDireccionId, String codigo, String nombre, String descripcion, boolean principal,
-			short ordinal, boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
+	public TiposDireccion(Integer tipoDireccionId, String codigo, String nombre, String descripcion, Boolean principal,
+			Short ordinal, Boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
 		this.tipoDireccionId = tipoDireccionId;
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -47,8 +48,8 @@ public class TiposDireccion implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public TiposDireccion(short tipoDireccionId, String codigo, String nombre, String descripcion, boolean principal,
-			short ordinal, boolean activo, Date fechaActualizacion, String usuarioActualizacion,
+	public TiposDireccion(Integer tipoDireccionId, String codigo, String nombre, String descripcion, Boolean principal,
+			Short ordinal, Boolean activo, Date fechaActualizacion, String usuarioActualizacion,
 			Set<Direcciones> direccioneses) {
 		this.tipoDireccionId = tipoDireccionId;
 		this.codigo = codigo;
@@ -63,13 +64,12 @@ public class TiposDireccion implements java.io.Serializable {
 	}
 
 	@Id
-
 	@Column(name = "Tipo_Direccion_Id", unique = true, nullable = false)
-	public short getTipoDireccionId() {
+	public Integer getTipoDireccionId() {
 		return this.tipoDireccionId;
 	}
 
-	public void setTipoDireccionId(short tipoDireccionId) {
+	public void setTipoDireccionId(Integer tipoDireccionId) {
 		this.tipoDireccionId = tipoDireccionId;
 	}
 
@@ -101,29 +101,29 @@ public class TiposDireccion implements java.io.Serializable {
 	}
 
 	@Column(name = "Principal", nullable = false)
-	public boolean isPrincipal() {
+	public Boolean isPrincipal() {
 		return this.principal;
 	}
 
-	public void setPrincipal(boolean principal) {
+	public void setPrincipal(Boolean principal) {
 		this.principal = principal;
 	}
 
 	@Column(name = "Ordinal", nullable = false)
-	public short getOrdinal() {
+	public Short getOrdinal() {
 		return this.ordinal;
 	}
 
-	public void setOrdinal(short ordinal) {
+	public void setOrdinal(Short ordinal) {
 		this.ordinal = ordinal;
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 
