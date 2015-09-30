@@ -23,11 +23,11 @@ import javax.persistence.UniqueConstraint;
 public class Paises implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private short paisId;
+	private Short paisId;
 	private String codigo;
 	private String nombre;
-	private short ordinal;
-	private boolean activo;
+	private Short ordinal;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<Departamentos> departamentoses = new HashSet<Departamentos>(0);
@@ -35,7 +35,7 @@ public class Paises implements java.io.Serializable {
 	public Paises() {
 	}
 
-	public Paises(short paisId, String codigo, String nombre, short ordinal, boolean activo, Date fechaActualizacion,
+	public Paises(Short paisId, String codigo, String nombre, Short ordinal, Boolean activo, Date fechaActualizacion,
 			String usuarioActualizacion) {
 		this.paisId = paisId;
 		this.codigo = codigo;
@@ -46,7 +46,7 @@ public class Paises implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public Paises(short paisId, String codigo, String nombre, short ordinal, boolean activo, Date fechaActualizacion,
+	public Paises(Short paisId, String codigo, String nombre, Short ordinal, Boolean activo, Date fechaActualizacion,
 			String usuarioActualizacion, Set<Departamentos> departamentoses) {
 		this.paisId = paisId;
 		this.codigo = codigo;
@@ -61,11 +61,11 @@ public class Paises implements java.io.Serializable {
 	@Id
 
 	@Column(name = "Pais_Id", unique = true, nullable = false)
-	public short getPaisId() {
+	public Short getPaisId() {
 		return this.paisId;
 	}
 
-	public void setPaisId(short paisId) {
+	public void setPaisId(Short paisId) {
 		this.paisId = paisId;
 	}
 
@@ -88,20 +88,20 @@ public class Paises implements java.io.Serializable {
 	}
 
 	@Column(name = "Ordinal", nullable = false)
-	public short getOrdinal() {
+	public Short getOrdinal() {
 		return this.ordinal;
 	}
 
-	public void setOrdinal(short ordinal) {
+	public void setOrdinal(Short ordinal) {
 		this.ordinal = ordinal;
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 

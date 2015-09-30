@@ -11,32 +11,32 @@ import javax.persistence.Embeddable;
 public class DepartamentosId implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private short paisId;
-	private short departamentoId;
+	private Short paisId;
+	private Short departamentoId;
 
 	public DepartamentosId() {
 	}
 
-	public DepartamentosId(short paisId, short departamentoId) {
+	public DepartamentosId(Short paisId, Short departamentoId) {
 		this.paisId = paisId;
 		this.departamentoId = departamentoId;
 	}
 
 	@Column(name = "Pais_Id", nullable = false)
-	public short getPaisId() {
+	public Short getPaisId() {
 		return this.paisId;
 	}
 
-	public void setPaisId(short paisId) {
+	public void setPaisId(Short paisId) {
 		this.paisId = paisId;
 	}
 
 	@Column(name = "Departamento_Id", nullable = false)
-	public short getDepartamentoId() {
+	public Short getDepartamentoId() {
 		return this.departamentoId;
 	}
 
-	public void setDepartamentoId(short departamentoId) {
+	public void setDepartamentoId(Short departamentoId) {
 		this.departamentoId = departamentoId;
 	}
 

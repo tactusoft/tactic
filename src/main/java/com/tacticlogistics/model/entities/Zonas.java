@@ -20,11 +20,12 @@ import javax.persistence.TemporalType;
 @Table(name = "Zonas", catalog = "dbo")
 public class Zonas implements java.io.Serializable {
 
-	private byte zonaId;
+	private static final long serialVersionUID = 1L;
+	private Integer zonaId;
 	private String codigo;
 	private String nombre;
-	private short ordinal;
-	private boolean activo;
+	private Short ordinal;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<Barrios> barrioses = new HashSet<Barrios>(0);
@@ -34,7 +35,7 @@ public class Zonas implements java.io.Serializable {
 	public Zonas() {
 	}
 
-	public Zonas(byte zonaId, String codigo, String nombre, short ordinal, boolean activo, Date fechaActualizacion,
+	public Zonas(Integer zonaId, String codigo, String nombre, Short ordinal, Boolean activo, Date fechaActualizacion,
 			String usuarioActualizacion) {
 		this.zonaId = zonaId;
 		this.codigo = codigo;
@@ -45,7 +46,7 @@ public class Zonas implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public Zonas(byte zonaId, String codigo, String nombre, short ordinal, boolean activo, Date fechaActualizacion,
+	public Zonas(Integer zonaId, String codigo, String nombre, Short ordinal, Boolean activo, Date fechaActualizacion,
 			String usuarioActualizacion, Set<Barrios> barrioses, Set<Direcciones> direccioneses,
 			Set<OrdenesTransporte> ordenesTransportes) {
 		this.zonaId = zonaId;
@@ -63,11 +64,11 @@ public class Zonas implements java.io.Serializable {
 	@Id
 
 	@Column(name = "Zona_Id", unique = true, nullable = false)
-	public byte getZonaId() {
+	public Integer getZonaId() {
 		return this.zonaId;
 	}
 
-	public void setZonaId(byte zonaId) {
+	public void setZonaId(Integer zonaId) {
 		this.zonaId = zonaId;
 	}
 
@@ -90,20 +91,20 @@ public class Zonas implements java.io.Serializable {
 	}
 
 	@Column(name = "Ordinal", nullable = false)
-	public short getOrdinal() {
+	public Short getOrdinal() {
 		return this.ordinal;
 	}
 
-	public void setOrdinal(short ordinal) {
+	public void setOrdinal(Short ordinal) {
 		this.ordinal = ordinal;
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 

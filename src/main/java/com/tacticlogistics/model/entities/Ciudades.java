@@ -25,12 +25,12 @@ import javax.persistence.UniqueConstraint;
 public class Ciudades implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private int ciudadId;
+	private Integer ciudadId;
 	private Departamentos departamentos;
 	private String codigo;
 	private String nombre;
-	private short ordinal;
-	private boolean activo;
+	private Short ordinal;
+	private Boolean activo;
 	private Date fechaActualizacion;
 	private String usuarioActualizacion;
 	private Set<Barrios> barrioses = new HashSet<Barrios>(0);
@@ -41,8 +41,8 @@ public class Ciudades implements java.io.Serializable {
 	public Ciudades() {
 	}
 
-	public Ciudades(int ciudadId, Departamentos departamentos, String codigo, String nombre, short ordinal,
-			boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
+	public Ciudades(Integer ciudadId, Departamentos departamentos, String codigo, String nombre, Short ordinal,
+			Boolean activo, Date fechaActualizacion, String usuarioActualizacion) {
 		this.ciudadId = ciudadId;
 		this.departamentos = departamentos;
 		this.codigo = codigo;
@@ -53,8 +53,8 @@ public class Ciudades implements java.io.Serializable {
 		this.usuarioActualizacion = usuarioActualizacion;
 	}
 
-	public Ciudades(int ciudadId, Departamentos departamentos, String codigo, String nombre, short ordinal,
-			boolean activo, Date fechaActualizacion, String usuarioActualizacion, Set<Barrios> barrioses,
+	public Ciudades(Integer ciudadId, Departamentos departamentos, String codigo, String nombre, Short ordinal,
+			Boolean activo, Date fechaActualizacion, String usuarioActualizacion, Set<Barrios> barrioses,
 			Set<OrdenesTransporte> ordenesTransportesForCiudadEntregaId,
 			Set<OrdenesTransporte> ordenesTransportesForCiudadOrigenId, Set<Direcciones> direccioneses) {
 		this.ciudadId = ciudadId;
@@ -74,11 +74,11 @@ public class Ciudades implements java.io.Serializable {
 	@Id
 
 	@Column(name = "Ciudad_Id", unique = true, nullable = false)
-	public int getCiudadId() {
+	public Integer getCiudadId() {
 		return this.ciudadId;
 	}
 
-	public void setCiudadId(int ciudadId) {
+	public void setCiudadId(Integer ciudadId) {
 		this.ciudadId = ciudadId;
 	}
 
@@ -112,20 +112,20 @@ public class Ciudades implements java.io.Serializable {
 	}
 
 	@Column(name = "Ordinal", nullable = false)
-	public short getOrdinal() {
+	public Short getOrdinal() {
 		return this.ordinal;
 	}
 
-	public void setOrdinal(short ordinal) {
+	public void setOrdinal(Short ordinal) {
 		this.ordinal = ordinal;
 	}
 
 	@Column(name = "Activo", nullable = false)
-	public boolean isActivo() {
+	public Boolean isActivo() {
 		return this.activo;
 	}
 
-	public void setActivo(boolean activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 
